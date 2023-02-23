@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "煎蛋无聊图加速",
+  "description": "替换煎蛋无聊图的图床为原先的新浪图床",
+  "author": "seiuneko",
+  "homepage_url": "https://github.com/seiuneko/JandanPicBoost",
+  "version": "0.0.1",
+  "icons": {
+    "48": "icons/jandan.svg",
+    "96": "icons/jandan.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "57.0a1"
+    }
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+  "permissions": [
+    "*://jandan.net/*",
+    "*://i.jandan.net/*",
+    "*://*.sinaimg.cn/*",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}
