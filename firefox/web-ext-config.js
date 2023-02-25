@@ -1,9 +1,7 @@
 module.exports = {
+    verbose: true,
     ignoreFiles: [
-        'screenshots',
         'web-ext-config.js',
-        'README.md',
-        'LICENSE',
     ],
     build: {
         overwriteDest: true,
