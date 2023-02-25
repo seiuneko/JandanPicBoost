@@ -21,10 +21,6 @@ function replaceDomain(details) {
 
 
 function addReferer(details) {
-    if (details.originUrl.indexOf('jandan.net') === -1) {
-        return {};
-    }
-
     let headers = details.requestHeaders;
     headers.push({name: "Referer", value: "https://weibo.com/"});
 
@@ -39,6 +35,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     addReferer,
-    {urls: ["*://*.sinaimg.cn/*"], types: ["image"]},
+    {urls: ["*://*.sinaimg.cn/*"], types: ["image", "main_frame"]},
     ["blocking", "requestHeaders"]
 );
