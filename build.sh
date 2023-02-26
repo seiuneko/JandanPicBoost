@@ -4,7 +4,7 @@ build() {
   target=$1
 
   version=$(jq -r .version "$target"/manifest.json)
-  web-ext build -s "$target" -n JandanPicBoost_v"$version"_"$target".zip
+  web-ext build -s "$target" -n v"$version"_"$target".zip
 }
 
 target=$1
