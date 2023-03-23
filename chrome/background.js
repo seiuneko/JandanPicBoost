@@ -2,7 +2,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     (details) => {
         return {redirectUrl: details.url.replace('moyu.im', 'sinaimg.cn')};
     },
-    {urls: ["*://*.moyu.im/*"], types: ["image"]},
+    {urls: ["*://*.moyu.im/*"], types: ["image", "main_frame"]},
     ["blocking"]
 );
 
