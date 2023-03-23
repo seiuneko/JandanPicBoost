@@ -11,17 +11,6 @@
     "48": "icons/jandan-48.png",
     "128": "icons/jandan-128.png"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://jandan.net/*",
-        "*://i.jandan.net/*"
-      ],
-      "js": [
-        "scripts/replace-link.js"
-      ]
-    }
-  ],
   "background": {
     "scripts": [
       "background.js"
