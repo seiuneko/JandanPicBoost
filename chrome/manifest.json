@@ -1,27 +1,32 @@
 {
-  "manifest_version": 2,
-  "name": "煎蛋无聊图加速",
-  "description": "替换煎蛋无聊图的图床为原先的新浪图床",
-  "author": "seiuneko",
-  "homepage_url": "https://github.com/seiuneko/JandanPicBoost",
-  "version": "0.3.1",
-  "icons": {
-    "16": "icons/jandan-16.png",
-    "32": "icons/jandan-32.png",
-    "48": "icons/jandan-48.png",
-    "128": "icons/jandan-128.png"
-  },
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
-  "permissions": [
-    "*://jandan.net/*",
-    "*://i.jandan.net/*",
-    "*://*.moyu.im/*",
-    "*://*.sinaimg.cn/*",
-    "webRequest",
-    "webRequestBlocking"
-  ]
+	"manifest_version": 3,
+	"name": "煎蛋无聊图加速",
+	"description": "替换煎蛋无聊图的图床为原先的新浪图床",
+	"author": "seiuneko",
+	"homepage_url": "https://github.com/seiuneko/JandanPicBoost",
+	"version": "0.4.0",
+	"icons": {
+		"16": "icons/jandan-16.png",
+		"32": "icons/jandan-32.png",
+		"48": "icons/jandan-48.png",
+		"128": "icons/jandan-128.png"
+	},
+	"permissions": [
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess",
+		"declarativeNetRequestFeedback"
+	],
+	"host_permissions": [
+		"*://jandan.net/*",
+		"*://i.jandan.net/*",
+		"*://*.moyu.im/*",
+		"*://*.sinaimg.cn/*"
+	],
+	"declarative_net_request": {
+		"rule_resources": [{
+			"id": "1",
+			"enabled": true,
+			"path": "rules.json"
+		}]
+	}
 }
