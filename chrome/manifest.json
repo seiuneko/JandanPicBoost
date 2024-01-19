@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "煎蛋无聊图加速",
   "description": "替换煎蛋无聊图的图床为原先的新浪图床",
   "author": "seiuneko",
@@ -11,17 +11,22 @@
     "48": "icons/jandan-48.png",
     "128": "icons/jandan-128.png"
   },
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
   "permissions": [
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
     "*://jandan.net/*",
     "*://i.jandan.net/*",
     "*://*.moyu.im/*",
-    "*://*.sinaimg.cn/*",
-    "webRequest",
-    "webRequestBlocking"
-  ]
+    "*://*.sinaimg.cn/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "jandan_ruleset",
+        "enabled": true,
+        "path": "jandan_ruleset.json"
+      }
+    ]
+  }
 }

@@ -1,3 +1,7 @@
 web-ext-artifacts
 
 .idea
+
+# Temporary directory for debugging extension samples
+_debug
+_metadata
