@@ -18,7 +18,7 @@
   },
   {
     "id": 2,
-    "priority": 2,
+    "priority": 1,
     "action": {
       "type": "modifyHeaders",
       "requestHeaders": [
@@ -30,7 +30,9 @@
       ]
     },
     "condition": {
-      "urlFilter": "sinaimg.cn",
+      "requestDomains": [
+        "sinaimg.cn"
+      ],
       "resourceTypes": [
         "main_frame",
         "image"
