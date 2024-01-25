@@ -23,7 +23,7 @@
 
 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/jandanpicboost/"><img src="img/get-the-addon-fx-apr-2020.svg" alt="Get JandanPicBoost for Firefox" height="64"></a>
 
-### Chromium
+### Chrome/Edge
 
 <a href="https://chromewebstore.google.com/detail/pgkhddbbipclegkaheabhpahkifdaane"><img src="img/Available_in_the_Chrome_Web_Store.svg" alt="Get JandanPicBoost for Chrome" height="64"></a>
 
@@ -37,10 +37,10 @@
 
 在开始安装之前，请从 [Releases](https://github.com/seiuneko/JandanPicBoost/releases/latest) 页面下载最新版本的扩展文件：
 
-| 浏览器      | 文件名格式   |
-|----------|---------|
-| Firefox  | `*.xpi` |
-| Chromium | `*.crx` |
+| 浏览器         | 文件名格式   |
+|-------------|---------|
+| Firefox     | `*.xpi` |
+| Chrome/Edge | `*.crx` |
 
 > :warning: **注意** 请务必仅从 GitHub Releases 页面下载扩展文件，以确保安全性。
 
@@ -51,11 +51,11 @@
 3. 在弹出的提示中点击 `添加` 按钮
 4. 安装完成
 
-#### Chromium
+#### Chrome/Edge
 
-1. 在 Chromium 地址栏输入 `chrome://extensions` 并回车
+1. 在 Chrome/Edge 地址栏输入 `chrome://extensions` 并回车
 2. 点击页面上的 `开发者模式` 切换按钮，启用开发者模式
-3. 将下载的 `.crx` 文件拖拽到 Chromium 的 `扩展程序` 页面。
+3. 将下载的 `.crx` 文件拖拽到 Chrome/Edge 的 `扩展程序` 页面。
 4. 在弹出的提示中点击 `添加扩展程序` 按钮
 5. 安装完成
 
@@ -70,6 +70,12 @@
 |                        安装前                        |                       安装后                       |
 |:-------------------------------------------------:|:-----------------------------------------------:|
 | ![Firefox 安装前](screenshots/firefox/disabled.png ) | ![Firefox 安装后](screenshots/firefox/enabled.png) |
+
+### Chrome
+
+|                       安装前                       |                      安装后                      |
+|:-----------------------------------------------:|:---------------------------------------------:|
+| ![Chrome 安装前](screenshots/chrome/disabled.png ) | ![Chrome 安装后](screenshots/chrome/enabled.png) |
 
 ### Edge
 
