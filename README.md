@@ -67,13 +67,15 @@
 
 ### Firefox
 
-![Firefox 安装前](screenshots/firefox/disabled.png)
-![Firefox 安装后](screenshots/firefox/enabled.png)
+|                        安装前                        |                       安装后                       |
+|:-------------------------------------------------:|:-----------------------------------------------:|
+| ![Firefox 安装前](screenshots/firefox/disabled.png ) | ![Firefox 安装后](screenshots/firefox/enabled.png) |
 
 ### Edge
 
-![Edge 安装前](screenshots/edge/disabled.png)
-![Edge 安装后](screenshots/edge/enabled.png)
+|                     安装前                     |                    安装后                    |
+|:-------------------------------------------:|:-----------------------------------------:|
+| ![Edge 安装前](screenshots/edge/disabled.png ) | ![Edge 安装后](screenshots/edge/enabled.png) |
 
 ## 友情链接
 
