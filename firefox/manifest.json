@@ -4,7 +4,7 @@
   "description": "替换煎蛋无聊图的图床为原先的新浪图床",
   "author": "seiuneko",
   "homepage_url": "https://github.com/seiuneko/JandanPicBoost",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "icons": {
     "48": "icons/jandan.svg",
     "96": "icons/jandan.svg"
