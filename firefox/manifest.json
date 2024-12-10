@@ -11,7 +11,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "strict_min_version": "57.0a1"
+      "strict_min_version": "58.0"
     }
   },
   "background": {
