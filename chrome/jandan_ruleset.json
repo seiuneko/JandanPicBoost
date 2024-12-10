@@ -20,6 +20,25 @@
     "id": 2,
     "priority": 1,
     "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "gzw.sinaimg.cn"
+        }
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://img\\.toto\\.im/",
+      "resourceTypes": [
+        "main_frame",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
       "type": "modifyHeaders",
       "requestHeaders": [
         {

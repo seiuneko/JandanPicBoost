@@ -14,7 +14,8 @@ browser.webRequest.onBeforeRequest.addListener(
             data.push(decoder.decode());
 
             let str = data.join("");
-            str = str.replaceAll(/moyu\.im/g, 'sinaimg.cn');
+            str = str.replaceAll(/(?<!img\.)moyu\.im/g, 'sinaimg.cn');
+            str = str.replaceAll("//img.toto.im", '//gzw.sinaimg.cn');
             filter.write(encoder.encode(str));
             filter.close();
         };

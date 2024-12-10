@@ -18,6 +18,7 @@
     "*://jandan.net/*",
     "*://i.jandan.net/*",
     "*://*.moyu.im/*",
+    "*://*.toto.im/*",
     "*://*.sinaimg.cn/*"
   ],
   "declarative_net_request": {
