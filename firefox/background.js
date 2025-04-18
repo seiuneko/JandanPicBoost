@@ -20,7 +20,7 @@ browser.webRequest.onBeforeRequest.addListener(
             filter.close();
         };
     },
-    {urls: ["*://jandan.net/*", "*://i.jandan.net/*"], types: ["main_frame"]},
+    {urls: ["*://jandan.net/api/*", "*://i.jandan.net/api/*"]},
     ["blocking"]
 );
 
