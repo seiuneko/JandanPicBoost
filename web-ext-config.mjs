@@ -1,7 +1,7 @@
-module.exports = {
+export default {
     verbose: true,
     ignoreFiles: [
-        'web-ext-config.js',
+        'web-ext-config.mjs',
     ],
     build: {
         overwriteDest: true,
