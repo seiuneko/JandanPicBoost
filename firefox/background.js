@@ -1,3 +1,16 @@
+const TOTO_IMG_URL = 'https://img.toto.im';
+const SINA_IMG_URL = 'https://tva1.sinaimg.cn';
+
+const WEIBO_REFERER = 'https://weibo.com/';
+
+const API_URL_PATTERNS = [
+    "*://jandan.net/api/*",
+    "*://i.jandan.net/api/*",
+    "*://jandan.net/t/*",
+    "*://i.jandan.net/t/*"
+];
+const SINAIMG_URL_PATTERN = "*://*.sinaimg.cn/*";
+
 browser.webRequest.onBeforeRequest.addListener(
     (details) => {
         // modify from: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
@@ -14,23 +27,40 @@ browser.webRequest.onBeforeRequest.addListener(
             data.push(decoder.decode());
 
             let str = data.join("");
-            str = str.replaceAll(/(?<!img\.)moyu\.im/g, 'sinaimg.cn');
-            str = str.replaceAll("//img.toto.im", '//tva1.sinaimg.cn');
+            str = str.replaceAll(TOTO_IMG_URL, SINA_IMG_URL);
             filter.write(encoder.encode(str));
             filter.close();
         };
     },
-    {urls: ["*://jandan.net/api/*", "*://i.jandan.net/api/*"]},
+    {
+        urls: API_URL_PATTERNS
+    },
     ["blocking"]
+);
+
+const SINAIMG_FILTER = {
+    urls: [SINAIMG_URL_PATTERN],
+    types: ["image", "main_frame"]
+};
+
+browser.webRequest.onHeadersReceived.addListener(
+    (details) => {
+        if (details.statusCode !== 200) {
+            return {redirectUrl: details.url.replace(SINA_IMG_URL, TOTO_IMG_URL)};
+        }
+    },
+    SINAIMG_FILTER,
+    ["blocking", "responseHeaders"],
 );
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     (details) => {
         let headers = details.requestHeaders;
-        headers.push({name: "Referer", value: "https://weibo.com/"});
+        headers.push({name: "Referer", value: WEIBO_REFERER});
 
         return {requestHeaders: headers};
     },
-    {urls: ["*://*.sinaimg.cn/*"], types: ["image", "main_frame"]},
+    SINAIMG_FILTER,
     ["blocking", "requestHeaders"]
 );
+

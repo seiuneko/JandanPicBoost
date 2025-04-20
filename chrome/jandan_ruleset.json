@@ -28,6 +28,14 @@
       }
     },
     "condition": {
+      "responseHeaders": [
+        {
+          "header": "non-authoritative-reason",
+          "excludedValues": [
+            "WebRequest API"
+          ]
+        }
+      ],
       "regexFilter": "^https?://img\\.toto\\.im/",
       "resourceTypes": [
         "main_frame",
@@ -49,6 +57,32 @@
       ]
     },
     "condition": {
+      "requestDomains": [
+        "sinaimg.cn"
+      ],
+      "resourceTypes": [
+        "main_frame",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "img.toto.im"
+        }
+      }
+    },
+    "condition": {
+      "responseHeaders": [
+        {
+          "header": "location"
+        }
+      ],
       "requestDomains": [
         "sinaimg.cn"
       ],
